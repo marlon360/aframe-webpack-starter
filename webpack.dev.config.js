@@ -1,5 +1,5 @@
 const path = require("path");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require("./webpack.common.config");
 
@@ -16,7 +16,6 @@ module.exports = merge(common, {
   },
   devServer: {
     https: true,
-    host: '0.0.0.0',
     overlay: {
       warnings: false,
       errors: true
